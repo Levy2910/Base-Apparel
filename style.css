@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container {
+    max-width: 60%;
+    height: 25rem;
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    /* border: 1px solid red; */
+}
+/* content part */
+.content{
+    /* border: 1px solid yellowgreen; */
+    flex: 60%;
+    padding: 1em 3em;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: cover;
+}
+.logo {
+    margin-bottom: 4.5em;
+}
+.logo img{
+    width: 5.5em;
+    height: 1.25em;
+}
+h2 {
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+}
+h2 span{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+p{
+    font-size: 0.85em;
+    color: hsl(0, 36%, 70%);
+    line-height: 1.3em;
+    margin-bottom: 1.5em;
+}
+.form_control{
+    width: 70%;
+    position: relative;
+}
+.form_control input{
+    border-radius: 2em;
+    width: 70%;
+    height: 2.5em;
+    border: 1px solid hsl(0, 36%, 70%);
+    padding: 0.5em;
+    padding-left: 1.2em;
+    cursor: pointer;
+}
+.form_control.error input{
+   border-color: hsl(0, 93%, 68%);
+}
+.form_control.success input{
+    border-color: green;
+ }
+.form_control img{
+    position: absolute;
+    width: 1em;
+    left: 0;
+    bottom: -1.25em;
+    visibility: hidden;
+}
+.form_control.error img{
+    visibility: visible;
+}
+.form_control small {
+    display: block;
+    position: absolute;
+    left: 2em;
+    bottom: -1.65em;
+    color: hsl(0, 93%, 68%);
+    visibility: hidden;
+}
+.form_control.error small{
+    visibility: visible;
+}
+.form_control input::placeholder{
+    font-size: 0.75em;
+    color: hsl(0, 36%, 70%);
+}
+.form_control button {
+    width: 20%;
+    height: 2.5em;
+    position: absolute;
+    right: 4em;
+    border-radius: 3em;
+    background-image: linear-gradient(hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    border: none;
+    cursor: pointer;
+}
+
+
+/* image part*/
+.image{
+    flex: 40%;
+    background-image: url("images/hero-desktop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* media query */
+@media (max-width: 1024px) and (min-width: 600px){
+    .image{
+        background-size: cover;
+    }
+}
+@media (max-width: 768px) {
+    .content{
+        flex: 40%;
+    }
+    .image{
+        flex: 60%;
+    }
+    .form input{
+        width: 90%;
+    }
+    button{
+        right: 1em;
+        width:25%;
+    }
+}
+@media (max-width: 450px) {
+    .container{
+        flex-direction: column-reverse;
+        height: 27rem;
+        position: relative;
+    }
+    .logo{
+        position: absolute;
+        top: -2em;
+        left: 0;
+    }
+    .image{
+        height: 10em;
+        background-size: cover;
+    }
+    .content{
+        height:5em;
+        padding: 1em 1em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 0.6em;
+        margin-bottom: 3em;
+    }
+    .form input {
+        width: 100%;
+    }
+    button{
+        border-radius: 1.5em;
+        height: 2.5em;
+        left:80%;
+    }
+}
