@@ -17,7 +17,7 @@
     /* border: 1px solid yellowgreen; */
     flex: 60%;
     padding: 1em 3em;
-    background-image: url("images/bg-pattern-desktop.svg");
+    background-image: url("bg-pattern-desktop.svg");
     background-size: cover;
 }
 .logo {
