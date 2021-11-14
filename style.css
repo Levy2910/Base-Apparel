@@ -103,7 +103,7 @@ p{
 /* image part*/
 .image{
     flex: 40%;
-    background-image: url("images/hero-desktop.jpg");
+    background-image: url("hero-desktop.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
